@@ -1,15 +1,19 @@
-﻿decimal distancia, x, y;
+﻿double x1, y1, x2, y2, distancia;
 
-Console.WriteLine("Digite a coordenada X do ponto A:");
-x = Convert.ToDecimal(Console.ReadLine());
+Console.WriteLine("Digite as coordenadas do primeiro ponto x:");
+x1 = Convert.ToDouble(Console.ReadLine());
 
-Console.WriteLine("Digite a coordenada Y do ponto A:");
-y = Convert.ToDecimal(Console.ReadLine());
+Console.WriteLine("Digite as coordenadas do primeiro ponto y:");
+y1 = Convert.ToDouble(Console.ReadLine());
 
-Console.WriteLine("Digite a coordenada X do ponto B:");
-decimal x2 = Convert.ToDecimal(Console.ReadLine());
+Console.WriteLine("Digite as coordenadas do segundo ponto x:");
+x2 = Convert.ToDouble(Console.ReadLine());
 
-Console.WriteLine("Digite a coordenada Y do ponto B:");
-decimal y2 = Convert.ToDecimal(Console.ReadLine());
+Console.WriteLine("Digite as coordenadas do segundo ponto y:");
+y2 = Convert.ToDouble(Console.ReadLine());
 
-distancia = Math.Sqrt(Math.Pow(x2 - x * 2) + Math.Pow(y2 - y * 2));
+distancia = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
+
+Console.WriteLine("A distância entre os dois pontos é: " + distancia + " unidades");
+// A distância entre dois pontos (x1, y1) e (x2, y2) é calculada pela fórmula:
+// distância = √((x2 - x1)² + (y2 - y1)²)
